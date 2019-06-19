@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: justify;
+}
+/************ Inicio del Menu Responsive *****/
+header {
+    width: 100%;
+    background: #4E94AB;
+}
+#btn_menu { /* Con el # se llama el ID del Objeto, y lo llamamos para ocultar el Checkbox */
+    display: none;
+    
+}
+header label {
+    display: none; /**Antes Block, luego se cambia
+    por none en las propiedades del responsive, para
+    que sea visible **/
+    width: 30px;
+    height: 30px;
+    padding: 10px; /** Para centrar el Elemento **/
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu ul {
+    margin 0;
+    list-style: none; /* Elimina las viñetas de lista */
+    padding: 0;
+    display: flex; /*Cambia de Lista a todo en linea */
+    /* justify-content: flex-end; --- Propiedad para alienarlos al final de la pagina o center para distribuir por toda la pagina */
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+ /*    text-align: center;   */
+ /*   flex-grow: 1; /* Propiedad para distribuir todos
+     los elementos en el header*/
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+
+/** Inicio de las Propiedades de la Lista o (li 
+a) los enlaces dentro del li, se conoce como li a **/
+
+.menu li a {
+    display: block; /* Da estado solido a los items*/
+    padding: 15px 20px; /*Propiedad de distribucion
+     y centrado */
+    color: #fff;
+    text-decoration: none; /*quita el subrayado del 
+    enlace */
+}
+
+@media (max-width:768px) {
+    header label {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        background: #4E94AB;
+        width: 60%;
+        margin-left: -60%;
+        transition: all 0.5s;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    
+    #btn_menu:checked ~ .menu {
+        margin: 0;
+    }
+}
+/********* Fin del Menu Responsive *********/
+
+.header2 {
+    margin: 0;
+    width: 100%;
+    height: 30px;
+    background: #E8E8E8;
+}
+
+footer {
+    background: #4E94AB;
+    display: flex;
+}
+
+Company {
+    margin: 0;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    
+}

@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+    min-height: 100vh;
+    background:url(../images/Institucion/drapeau_CC.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#box {
+    align-content: center;
+    height: 100px;
+    width: 100px;
+    position: center;
+    
+}

@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* se importa la fuente desde google fonts, y luego se copia la guia css para implementarla en el body*/
+@import url(menu.css);
+@import url(banner.css);
+@import url(blog.css);
+@import url(info.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*se contenta en modelo de caja */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%; /* ancho en porcentaje */
+    height: 50px; /* alto en pixeles */
+    background: #333;
+    color: #fff;
+    
+    position: fixed; /* se utiliza para que el banner se quede pegado 'colorin colorado' */
+    top: 0;
+    left: 0;
+    z-index: 100; /*donde z es el tercer plano y el header este por delante de todos los elementos*/
+    
+    
+}    
+.contenedor {
+        width: 98%;
+        margin: auto;
+}
+
+h1 {
+    float: left;
+}
+
+header .contenedor{
+    display: table;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#Bienvenidos {
+    text-align: center;
+}
+
+/******************************* Estilos del Footer *************************************/
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.copy {
+    font-size: 20px;
+    /*text-align: center;*/
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a {
+    color: #333;
+    text-decoration: none;
+}
+
+/**************************** Fin stilos del footer *******************************/ 
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+}

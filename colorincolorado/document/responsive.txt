@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+/********Inicio Menu Resposive***********/
+header {
+    width: 100%; /*Para que de adapte a todo el contenedor */
+    background: #4E94AB;
+}
+
+#btn_menu { /*Con el # se llama al id del objeto, ocultando el checkbox*/
+    display: none;
+}
+
+header label {
+    display: none; /*antes block, luego none para cambiarlo en las propiedades de anchor y que sea visible*/
+    width: 30px;
+    height: 30px;
+    padding: 10px;/*significa centrado de elemento*/
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+    /*border-radius: 10%;*/
+}
+
+.Menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /*justify-content: flex-end; --- Para alinearlo en sentido contrario o center para dejarlo todo centrado*/
+}
+
+.Menu li {
+    border-right: 1px solid #fff;
+    /*text-align: center;----- alineando texto al centro de contenido
+    flex-grow: 1; ------ permite distribuir todo el menu por la pagina uniformemente*/   
+}
+
+
+.Menu li:hover{
+    background: rgba(0,0,0,0.3);
+   
+}
+
+.Menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+@media (max-width:768px) {
+    header label {
+        display: block;
+    }
+
+    .Menu {
+        position: absolute;
+        background: #4E94AB;
+        width: 60%;
+        margin-left: -60%;
+        transition: all 0.5s;
+    }
+    
+    .Menu ul {
+        flex-direction: column;
+    }
+    
+    .Menu li {
+        border-top: 1px solid #fff;
+    }
+    #btn_menu:checked ~ .Menu {
+        margin: 0;
+    }
+}
+/********* Fin de Menu Responsive ***********/
+.header2 {
+    padding: 20px 50px;
+    width: 100%; /*Para que de adapte a todo el contenedor */
+    background: #FFF;
+    justify-content: center;
+    
+}
+
+#logo {
+    width: 300px;
+}
+
+header2 label {
+    text-align: justify;
+}
+
+header label:hover{
+    background: rgba(0,0,0,0.2);
+}
